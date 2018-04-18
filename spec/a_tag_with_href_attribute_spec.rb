@@ -6,13 +6,13 @@ RSpec.describe "An <a> tag with an 'href' attribute" do
     expect(a_tag).to_not be_nil
   end
 
-  it "has the inner text of 'Flatiron School'" do
+   puts it "has the inner text of 'Flatiron School'" do
     a_tag = parsed_html.search('a').first
 
     expect(a_tag.text).to eq('Flatiron School')
   end
 
-  puts it "has the href attribute of 'https://flatironschool.com'" do
+  it "has the href attribute of 'https://flatironschool.com'" do
     a_tag = parsed_html.search('a').first
 
     expect(a_tag.attr('href')).to eq('https://flatironschool.com')
